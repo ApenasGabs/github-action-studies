@@ -21,7 +21,6 @@ jobs:
 
       - name: Add Mirror Remote Repository
         run: |
-          git remote remove mirror-repo || true 
           git remote add mirror-repo https://${{ secrets.MIRROR_TOKEN }}@${{ secrets.MIRROR_URL }}
           git fetch mirror-repo
 
